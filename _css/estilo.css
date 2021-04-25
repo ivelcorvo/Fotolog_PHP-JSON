@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+:root{
+    --cor1: steelblue;
+    --cor2: #fff;
+    --cor3: #969696;
+    --cor4: #26418b;
+    --cor5: #c70000;
+}
+
+.conteiner{
+    width: 60%;
+    margin: auto;
+}
+
+.titulo{
+    font-size: 40px;
+}
+.titulo2{
+    font-size: 20px;
+}
+
+.flex{
+    display: flex;
+}
+
+.img-responsivo{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========================================================================================================= */
+/*                                                  menu                                                     */
+/* ========================================================================================================= */
+nav.menu-wrapper{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: var(--cor1);
+    position: relative;
+}
+
+/* menu-desktop */
+ul.menu-desktop{
+    list-style-type: none;
+    display: flex;
+}
+ul.menu-desktop li{
+    text-align: center;
+}
+ul.menu-desktop li a{
+    display: block;
+    text-decoration: none;
+    color: var(--cor2);
+    padding: 0 20px;
+}
+ul.menu-desktop li a:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* menu-mobile */
+.lbl-mobile, ul.menu-mobile, #check-mobile{
+    display: none;
+}
+.lbl-mobile{
+    font-size: 30px;
+    color: var(--cor2);
+    width: 50px;
+    padding-left: 15px;    
+    cursor: pointer;
+}
+ul.menu-mobile{
+    width: 200px;
+    background-color: var(--cor1);
+    margin-left: -500px;
+    transition: 0.5s;
+}
+ul.menu-mobile li{
+    width: 100%;
+}
+ul.menu-mobile li a{
+    display: block;
+    text-decoration: none;
+    color: var(--cor2);
+    padding-left: 15px;    
+}
+ul.menu-mobile li a:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+#check-mobile:checked ~ ul.menu-mobile{
+    margin-left: 0;
+    transition: 0.5s; 
+}
+
+@media only screen and (max-width: 1000px){
+    ul.menu-desktop{
+        display: none;
+    }
+    .lbl-mobile, ul.menu-mobile{
+        display: block;
+    }
+}
+
+/* ========================================================================================================= */
+/*                                                  geral                                                    */
+/* ========================================================================================================= */
+
+section.principal{
+    height: auto;
+    box-shadow: 2px 2px 20px #969696;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: var(--cor1);
+}
+
+.campo{
+    width: 100%;
+    height: 30px;
+}
+
+.btn{
+    padding: 5px 10px;
+    border: none;
+    color: var(--cor2);
+    background-color: var(--cor1)
+}
+
+fieldset{
+    padding: 20px;
+}
+fieldset legend{
+    padding: 0 20px;
+    
+}
+/* ========================================================================================================= */
+/*                                               Nova Postagem                                               */
+/* ========================================================================================================= */
+#foto{
+    display: none;
+}
+.lbl-foto img{
+    padding: 2px 8px;
+    cursor: pointer;
+    background-color: var(--cor1);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+textarea{
+    width: 100%;
+    height: 50px;
+}
+
+.extensao_invalida{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: var(--cor5);
+}
+.extensao_invalida span, .extensao_invalida p{
+    color: var(--cor2);
+}
+
+/* ========================================================================================================= */
+/*                                               Usuários                                                    */
+/* ========================================================================================================= */
+.usuario-input{
+    display: flex;
+    justify-content: space-between;
+}
+.usuario-input .input-nome, .usuario-input .input-email{
+    width: 49%;
+}
+@media only screen and (max-width: 1000px){
+    .usuario-input{
+        flex-direction: column;
+    }
+    .usuario-input .input-nome, .usuario-input .input-email{
+        width: 100%;
+    }
+}
+
+ul.usuario{
+    list-style-type: none;
+}
+ul.usuario li{
+    border-bottom: 1px solid var(--cor3);
+    margin-top: 15px;    
+}
+ul.usuario li img.circulo{
+    width: 32px;
+    height: 32px;
+    border: 4px solid var(--cor1);
+    border-radius: 50%;
+    background-color: var(--cor1);
+}
+ul.usuario li span{
+    margin-left: 10px;
+}
+
+.sem-usuario{
+    width: 100%;
+    padding: 20px;
+    background-color: var(--cor4);
+}
+.sem-usuario span, .sem-usuario p{
+    color: var(--cor2);
+}
+
+/* ========================================================================================================= */
+/*                                               Fotos                                                       */
+/* ========================================================================================================= */
+.sem-postagem{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: var(--cor4);
+}
+.sem-postagem span, .sem-postagem p{
+    color: var(--cor2);
+}
+.fotos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+figure{
+    width: 45%;
+    box-shadow: 2px 2px 20px #969696;
+    margin-bottom: 40px;
+}
+figure figcaption{
+    padding: 0 15px 5px;
+}
